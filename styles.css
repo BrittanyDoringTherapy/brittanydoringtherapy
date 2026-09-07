@@ -368,34 +368,6 @@ img { max-width: 100%; display: block; }
   aspect-ratio: 4 / 5;
 }
 
-.credentials-strip {
-  margin-top: 40px;
-  padding: 32px 40px;
-  background: var(--cream-alt);
-  border-radius: var(--radius);
-}
-.credentials-strip h3 {
-  margin-bottom: 20px;
-}
-
-.credentials-row {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-.credentials-row li {
-  padding: 6px 24px;
-  border-right: 1px solid rgba(92, 54, 153, 0.22);
-  font-size: 0.92rem;
-  color: rgba(92, 54, 153, 0.72);
-}
-.credentials-row li:last-child {
-  border-right: none;
-}
-
 /* -------------------- Specialties tags -------------------- */
 
 .specialties {
@@ -821,8 +793,6 @@ html.js-anim .hero-anim.in-view {
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .fees-simple-inner { grid-template-columns: 1fr; }
   .fees-media { max-width: 360px; margin: 0 auto; }
-  .credentials-row { flex-direction: column; align-items: center; gap: 10px; }
-  .credentials-row li { border-right: none; padding: 0; }
 }
 
 @media (max-width: 768px) {
@@ -868,5 +838,4 @@ html.js-anim .hero-anim.in-view {
   .hero { padding-top: 48px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { text-align: center; }
-  .credentials-strip { padding: 24px 20px; }
 }
