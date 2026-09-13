@@ -363,6 +363,17 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
+.professional-verification {
+  min-height: 52px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.professional-verification .sx-verified-seal {
+  display: inline-block;
+}
+
 .hero-photo,
 .headshot-photo {
   width: 100%;
@@ -717,6 +728,9 @@ img { max-width: 100%; display: block; }
   color: var(--white);
   font-weight: 700;
 }
+.footer-email {
+  overflow-wrap: anywhere;
+}
 .footer-col a {
   color: #E8E0EE;
   transition: color 0.2s ease;
@@ -776,7 +790,7 @@ html.js-anim .hero-anim.in-view {
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
