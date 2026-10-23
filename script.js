@@ -81,4 +81,57 @@
     });
   }
 
+  // Contact form submission (Formspree — see TODO in index.html)
+  var form = document.getElementById("contact-form");
+  var status = document.getElementById("form-status");
+  var fallbackMessage = "Something went wrong. Please email Brittany@brittanydoringtherapy.com directly.";
+
+  if (form && status) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Honeypot check
+      var honeypot = form.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) {
+        return;
+      }
+
+      status.textContent = "";
+      status.className = "form-status";
+
+      // Form endpoint not set up yet
+      if (form.action.indexOf("YOUR_FORM_ID") !== -1) {
+        status.textContent = "The form isn't connected yet. Please email Brittany@brittanydoringtherapy.com directly.";
+        status.classList.add("error");
+        return;
+      }
+
+      var submitBtn = form.querySelector(".form-submit");
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            status.textContent = "Thank you for reaching out. I'll respond within 48 business hours (Monday–Friday).";
+            status.classList.add("success");
+            form.reset();
+          } else {
+            status.textContent = fallbackMessage;
+            status.classList.add("error");
+          }
+        })
+        .catch(function () {
+          status.textContent = fallbackMessage;
+          status.classList.add("error");
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+    });
+  }
+
 })();
