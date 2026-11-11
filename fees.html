@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=20261023-1">
+<link rel="stylesheet" href="styles.css?v=20261111-5">
 <link rel="icon" href="data:,">
 
 <!-- JSON-LD: WebPage -->
@@ -59,6 +59,7 @@
         <li><a href="index.html#focus-areas">Focus Areas</a></li>
         <li><a href="index.html#approach">Approach</a></li>
         <li><a href="fees.html" aria-current="page">Fees</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
@@ -106,19 +107,16 @@
     </div>
   </section>
 
-  <!--
-    TODO: Mentaya widget
-    1. In your Mentaya account, copy the embed snippet for the benefits-checker widget.
-    2. Paste it inside #mentaya-widget below.
-    3. Delete the `hidden` attribute on this section so it appears on the page.
-    Edit the heading and sentence below to match how the widget reads once it's in.
-  -->
+  <!-- TODO: Mentaya widget is hidden until the full widget code is confirmed working. Delete the `hidden` attribute below (and on the homepage block) to show it. -->
   <section class="mentaya-section" id="mentaya" hidden>
     <div class="container">
       <div class="mentaya-inner">
-        <h2>Check your out-of-network benefits</h2>
-        <p>Enter your insurance details to see how much of each session your plan may reimburse.</p>
-        <div id="mentaya-widget"></div>
+        <h2>Use your out-of-network benefits</h2>
+        <p>I have partnered with Mentaya to help clients use their out-of-network benefits to save money on therapy. Use this tool to see if you qualify for reimbursement for my services.</p>
+        <div id="mentaya-widget">
+          <iframe width="100%" height=350 loading="lazy" style="border:none;border-radius:20px;max-width:600px;margin:auto;display:block;" onload="const resize=() => this.height=this.clientWidth >= 600?350:590;resize();window.addEventListener('resize', resize);" src="https://app.mentaya.com/public/practices/tNxorCthqYvCzBmhoIKP/eligibility/widget" title="Check Mentaya eligibility"></iframe>
+        </div>
+        <p class="mentaya-note">This tool is provided by Mentaya, so the details you enter go to Mentaya rather than to me.</p>
       </div>
     </div>
   </section>
@@ -129,12 +127,14 @@
 
         <div class="prose-block reveal">
           <h2>Therapy that centers you</h2>
-          <p>Paying privately for therapy can offer several benefits:</p>
+          <p>Whether you use Aetna or pay privately, my approach is the same: thoughtful, collaborative care shaped around your needs, goals, and circumstances.</p>
+          <p>If you're considering private pay, here are a few things to know:</p>
           <ul>
-            <li><strong>Your care is guided by your needs.</strong> Rather than structuring our work around insurance requirements, we can collaborate on goals, explore what feels most important to you, and determine the focus and pace of therapy based on your individual circumstances and clinical needs.</li>
-            <li><strong>A more personal approach to care.</strong> I value being responsive, intentional, and fully present in my work with clients. Maintaining a practice that reflects these priorities allows me to be thoughtful about my caseload and the quality of care I provide.</li>
-            <li><strong>More privacy from insurance processes.</strong> When you choose not to submit claims to your health insurance, your therapy sessions and associated diagnoses are not shared with your insurer through the claims process. Confidentiality still has legal and professional limits, and other records or disclosures may be subject to applicable laws.</li>
+            <li><strong>You can begin without using insurance.</strong> Private pay is an option if you have another insurance plan or prefer to pay directly. Sessions are $175 for 55 minutes.</li>
+            <li><strong>You can choose whether to seek reimbursement.</strong> If your plan includes out-of-network benefits, I can provide a superbill for you to submit. Reimbursement depends on your plan.</li>
+            <li><strong>You can keep your care separate from insurance claims.</strong> If you pay privately and don't submit claims, I won't bill your insurer for your sessions. Submitting a superbill generally shares information about your treatment, including a diagnosis, with your insurer. The usual limits of confidentiality apply regardless of how you pay.</li>
           </ul>
+          <p>We can discuss fees and payment options during your free consultation so you know what to expect before getting started.</p>
         </div>
 
         <div class="prose-block reveal">
@@ -218,7 +218,9 @@
       <h3>Explore</h3>
       <p><a href="anxiety-therapy.html">Anxiety &amp; Overthinking</a></p>
       <p><a href="burnout-boundaries-people-pleasing.html">Burnout, Boundaries &amp; People-Pleasing</a></p>
+      <p><a href="maternal-mental-health.html">Maternal Mental Health</a></p>
       <p><a href="fees.html">Fees &amp; Insurance</a></p>
+      <p><a href="blog.html">Blog</a></p>
     </div>
     <div class="footer-col">
       <h3>Legal</h3>

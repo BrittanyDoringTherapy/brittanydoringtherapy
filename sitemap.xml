@@ -16,6 +16,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.brittanydoringtherapy.com/maternal-mental-health.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.brittanydoringtherapy.com/blog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.brittanydoringtherapy.com/fees.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
